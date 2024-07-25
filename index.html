@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="images/logo w.fit-11.png" type="image/x-icon">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+      <!--=============== SWIPER CSS ===============--> 
+      <link rel="stylesheet" href="css/swiper-bundle.min.css">
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/master.css">
+      
+<style>
+   
+#language-selector {
+   appearance: none;
+    font-weight: bolder;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-size: cover;
+    background-position: center;
+    color: var(--body-color);
+    border: none;
+    background: var(--first-color);
+    padding: 10px;
+    border-radius: 1rem 0;
+    cursor: pointer;
+    outline: none;
+}
+
+#language-selector option {
+  color: #000;
+}
+</style>
+
+      <title>Wissam</title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+        
+         <nav class="nav container">
+            <a href="index.html" class="logo">
+               <img src="images/logo w.fit-11.png" alt="">
+            </a>
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#home" class="nav__link" data-lang="home">Home</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#about" class="nav__link" data-lang="About">About</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#tranding" class="nav__link" data-lang="Transformation">Transformation</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#pricing" class="nav__link" data-lang="Pricing">Pricing</a>
+                  </li>
+                  <!-- <li class="nav__item">
+                     <a href="#calc" class="nav__link">Calc</a>
+                  </li> -->
+                  <li class="nav__item">
+                     <a href="#contact" class="nav__link" data-lang="Contact">Contact</a>
+                  </li>
+               </ul>
+               <div class="nav__social">
+                  <a href="https://www.facebook.com/IFBB.ProWassemHassan?mibextid=JRoKGi&rdid=Vxi2LeIscSTtys3y&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FRzSpt5TZCL9JzQkN%2F%3Fmibextid%3DJRoKGi" target="_blank" class="nav__social-link">
+                     <i class="ri-facebook-circle-fill"></i>
+                  </a>
+                  <a href="https://www.instagram.com/wassimhs1/?g=5" target="_blank" class="nav__social-link">
+                     <i class="ri-instagram-fill"></i>
+                  </a>
+                  <a href="https://www.youtube.com/@wassim_hassan" target="_blank" class="nav__social-link">
+                     <i class="ri-youtube-fill"></i>
+                  </a>
+                  <a href="https://www.tiktok.com/@ifbbprowassimhassan?_t=8nTAgnInKBk&_r=1" target="_blank" class="nav__social-link">
+                     <i class="ri-tiktok-fill"></i>
+                  </a>
+               </div>
+               
+                
+                  <!--   CLOSE BUTTON  -->
+                  <div class="nav__close" id="nav-close">
+                     <i class="ri-eye-close-fill "></i>
+               </div>
+
+            </div>
+
+                           <!--   Toggle button  -->
+                           <div class="nav__buttons">
+                              <i class="ri-moon-fill change-theme" id="theme-button"></i>
+                     
+                                  <div class="nav__toggle" id="nav-toggle">
+                                    <i class="ri-menu-fold-2-fill"></i>
+                     
+                                  </div>
+                                  <select  name="" id="language-selector">
+                                    <i class="fa-solid fa-earth-oceania"></i>
+                                    <option value="en" selected>En</option>
+                                    <option value="ar">Ar</option>
+                                </select>
+                                 </div>
+         </nav>
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+
+        <!--==================== HOME ====================-->
+        <section class="home" id="home">
+         <div class="video-container">
+             <video class="home__video" autoplay muted loop>
+                 <source src="videos/v3.mp4" type="video/mp4" >
+             </video>
+             <div class="video-overlay"></div>
+         </div>
+         <div class="home__img">
+
+         </div>
+         <div class="home__container container grid">
+             <div class="home__data">
+                 <h1 class="home__title">
+                    <p data-lang="home1">Transform your</p> <p data-lang="home2">body with Wassim</p>
+                 </h1>
+                 <p  data-lang="home3" class="home__description">
+                 Welcome to Wassim, your ultimate destination for fitness guidance and inspiration.
+                 </p>
+                 <a data-lang="button" href="pricing.html" class="button button--flex">
+                     Get Start <i class="ri-arrow-right-circle-fill"></i>
+                 </a>
+             </div>
+
+             <div class="home__social">
+                 <span data-lang="follow" class="home__social-follow">Follow Us</span>
+
+                 <div class="home__social-links">
+                     <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                         <i class="ri-facebook-fill"></i>
+                     </a>
+                     <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                         <i class="fa-brands fa-tiktok"></i>
+                     </a>
+                     <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                         <i class="ri-instagram-line"></i>
+                     </a>
+                     <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                         <i class="ri-youtube-fill"></i>
+                     </a>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+
+     <div class="wrapper" data-aos="fade-right">
+      <div class="containere">
+         <i class="ri-youtube-fill"></i>
+          <span class="num" data-val="14">00K</span>
+          <!-- <span class="text">Followers</span> -->
+      </div>
+      <div class="containere">
+         <i class="ri-tiktok-fill"></i>
+          <span class="num" data-val="40">00K</span>
+          <!-- <span class="text">Followers</span> -->
+      </div>
+      <div class="containere">
+         <i class="ri-facebook-fill"></i>
+          <span class="num" data-val="30">00K</span>
+          <!-- <span class="text">Followers</span> -->
+      </div>
+      <div class="containere">
+         <i class="ri-instagram-line"></i>
+          <span class="num" data-val="32">00K</span>
+          <!-- <span class="text">Followers</span> -->
+      </div>
+  </div>
+
+         <!--==================== ABOUT ====================-->
+         <section class="about section" id="about">
+            <div class="about__container container grid">
+               <div class="about__data">
+                  <h2 data-lang="about1" class="section__title se-arab">About Us</h2>
+                  <p data-lang="about2" class="about__description">
+                     Hi, I'm Wasim Hassan, a professional champion in the NBC federation. My journey began with earning my pro card at Mr. Olympia Lebanon. I've since won Mr. World and the Dubai International, where I was crowned Champion of Champions. Additionally, I've earned a pro card from ELITE. As a professional trainer, I help athletes achieve their goals, from muscle gain and weight loss to competition prep. Currently based in the UAE, I'm dedicated to advancing my career and helping others reach their dreams
+                  </p>
+                  <a data-lang="button2" href="about.html" class="button">Know More</a>
+               </div>
+               <img src="images/1.jpg" alt="" class="about__img">
+            </div>
+         </section>
+
+               <!--==================== FAVORITE ====================-->
+               <section id="tranding">
+                  <div class="containero">
+                    <h3 data-lang="transformation" class="section__title">Transformation</h3>
+                  </div>
+                  <div class="containero">
+                    <div class="swiper tranding-slider">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide tranding-slide">
+                          <div class="tranding-slide-img">
+                            <img src="images/trans1.jpg" alt="Tranding">
+                          </div>
+                          <div class="tranding-slide-content">
+                           
+                            <div class="tranding-slide-content-bottom">
+                            
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="swiper-slide tranding-slide">
+                          <div class="tranding-slide-img">
+                            <img src="images/trans2.jpg" alt="Tranding">
+                          </div>
+                          <div class="tranding-slide-content">
+                         
+                            <div class="tranding-slide-content-bottom">
+                            
+                            </div>
+                          </div>
+                        </div>
+                  
+                        <div class="swiper-slide tranding-slide">
+                          <div class="tranding-slide-img">
+                            <img src="images/trans3.jpg" alt="Tranding">
+                          </div>
+                          <div class="tranding-slide-content">
+                           
+                            <div class="tranding-slide-content-bottom">
+                            
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="swiper-slide tranding-slide">
+                          <div class="tranding-slide-img">
+                            <img src="images/trans10.jpg" alt="Tranding">
+                          </div>
+                          <div class="tranding-slide-content">
+                        
+                            <div class="tranding-slide-content-bottom">
+                             
+                          
+                              <h3 class="food-rating">
+                               
+                              </h3>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="swiper-slide tranding-slide">
+                          <div class="tranding-slide-img">
+                            <img src="images/trans14.jpg" alt="Tranding">
+                          </div>
+                          <div class="tranding-slide-content">
+                          
+                            <div class="tranding-slide-content-bottom">
+                          
+                              <h3 class="food-rating">
+                          
+                              </h3>
+                            </div>
+                          </div>
+                        </div>
+                    
+                        <div class="swiper-slide tranding-slide">
+                          <div class="tranding-slide-img">
+                            <img src="images/trans19.jpg" alt="Tranding">
+                          </div>
+                          <div class="tranding-slide-content">
+                    
+                            <div class="tranding-slide-content-bottom">
+                          
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="swiper-slide tranding-slide">
+                          <div class="tranding-slide-img">
+                            <img src="images/trans5.jpg" alt="Tranding">
+                          </div>
+                          <div class="tranding-slide-content">
+                      
+                            <div class="tranding-slide-content-bottom">
+                           
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide tranding-slide">
+                          <div class="tranding-slide-img">
+                            <img src="images/trans21.jpg" alt="Tranding">
+                          </div>
+                          <div class="tranding-slide-content">
+                      
+                            <div class="tranding-slide-content-bottom">
+                           
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+            
+                      <div class="tranding-slider-control">
+                        <div class="swiper-button-prev slider-arrow">
+                          <ion-icon name="arrow-back-outline"></ion-icon>
+                        </div>
+                        <div class="swiper-button-next slider-arrow">
+                          <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+            
+                    </div>
+                  </div>
+                </section> 
+
+         <!--==================== pricing ====================-->
+         <section class="pricing section" id="pricing">
+               <div class="container">
+                  <div class="section__data">
+                     <div class="section__titles">
+                        <h1 data-lang="pricingtitle" class="section__title se-arab">Pricing</h1>
+                     </div>
+                  </div>
+
+                  <div class="pricing__container grid">
+                     <article class="pricing__card article1">
+                        <header class="pricing__header">
+                           <div class="pricing__shape">
+                              <img src="icon/3.svg" alt="" class="pricing__img">
+                           </div>
+                           <h1 data-lang="pricingtitle1" class="pricing__title">BASIC PACKAGE</h1>
+                           <h2 data-lang="pricingpackage1"  class="pricing__number">3month / $600</h2>
+                        </header>
+                        <ul class="pricing__list">
+                           <li class="pricing__item">
+                              <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli1">Training Program</p>
+                           </li>
+                           <li class="pricing__item">
+                              <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli2">Daily WhatsApp Follow-up</p>
+                           </li>
+                           <li class="pricing__item">
+                              <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli3">Nutritional Program</p>
+                           </li>
+                           <li class="pricing__item">
+                              <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli4">Dietary Supplements</p>
+                           </li>
+                           <li class="pricing__item">
+                              <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli5">Performance Enhancers</p>
+                           </li>
+                           
+                        </ul>
+                        <a data-lang="button3"  href="#" class="button button__flex pricing__button">
+                           Purchase Now
+                        </a>
+                     </article>
+
+                     <article class="pricing__card  article2">
+                        <header class="pricing__header">
+                           <div class="pricing__shape">
+                              <img src="icon/2.svg" alt="" class="pricing__img">
+                           </div>
+                           <h1 data-lang="pricingtitle2"  class="pricing__title">PREMIUM PACKAGE</h1>
+                           <h2 data-lang="pricingpackage2" class="pricing__number"> 6month / $1000</h2>
+                        </header>
+                        <ul class="pricing__list">
+                           <li class="pricing__item">
+                              <i class="ri-checkbox-circle-line"></i> <p  data-lang="pricinglli12">Training Program (with regular updates)</p>
+                           </li>
+                           <li class="pricing__item">
+                              <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli2">Daily WhatsApp Follow-up</p>
+                           </li>
+                           <li class="pricing__item">
+                              <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli14">Nutritional Program (monthly updates)</p>
+                           </li>
+                           <li class="pricing__item">
+                              <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli4">Dietary Supplements</p>
+                           </li>
+                           <li class="pricing__item">
+                              <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli5">Performance Enhancers</p>
+                           </li>
+                           
+                        </ul>
+                        <a data-lang="button3" href="#" class="button button__flex pricing__button">
+                           Purchase Now
+                        </a>
+                     </article>
+
+                     <article class="pricing__card  article3">
+                        <header class="pricing__header">
+                           <div class="pricing__shape">
+                              <img src="icon/5.svg" alt="" class="pricing__img">
+                           </div>
+                           <h1 data-lang="pricingtitle3" class="pricing__title">DIAMOND PACKAGE</h1>
+                           <h2 data-lang="pricingpackage3" class="pricing__number"> 1year / $2000</h2>
+                        </header>
+                        <ul class="pricing__list">
+                           <li class="pricing__item">
+                              <i class="ri-checkbox-circle-line"></i> <p  data-lang="pricinglli31">Training Program (private sessions)</p>
+                           </li>
+                           <li class="pricing__item">
+                              <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli2">Daily WhatsApp Follow-up</p>
+                           </li>
+                           <li class="pricing__item">
+                              <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli33">Nutritional Program (weekly updates)</p>
+                           </li>
+                           <li class="pricing__item">
+                              <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli4">Dietary Supplements</p>
+                           </li>
+                           <li class="pricing__item">
+                              <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli5">Performance Enhancers</p>
+                           </li>
+                           
+                        </ul>
+                        <a data-lang="button3" href="#" class="button button__flex pricing__button">
+                           Purchase Now
+                        </a>
+                     </article>
+                  </div>
+               </div>
+         </section> 
+         <!--==================== CALC ====================-->
+         <section class="nutrantion section container" id="calc">
+                  <div class="nutrantion__container grid">
+                      <img src="images/des13.png" alt="" class="nutrantion__img">
+      
+                      <div class="nutrantion__data">
+                          <h2 class="section__title nutrantion__title">
+                           <p data-lang="nurationp1">DISCOVER YOUR </p><p data-lang="nurationp2">CALORIE NEEDS</p>
+                        </h2>
+      
+                          <p data-lang="nurationp3" class="nutrantion__description">
+                           Discover your daily calorie needs effortlessly with our exclusive calculator. Simply enter your age, weight, and height to get started. This tool is a gift from Coach Wasim to help you stay on track with your nutrition goals.
+                          </p>
+      
+                          <div class="nutrantion__details">
+                              <div class="fle">
+                                 <p class="nutrantion__details-description nutrantion__details-icon">
+                                    <i class="ri-cake-3-line"></i>
+                                   <p class="nutrantion__details-description nutrantion__details-icon" data-lang="nurationp11">Find out how many calories you need daily.</p>
+                                </p>
+                              </div>
+                              <div class="fle">
+                                 <p class="nutrantion__details-description nutrantion__details-icon">
+                                    <i class="ri-clipboard-fill"></i>
+                                   <p class="nutrantion__details-description nutrantion__details-icon" data-lang="nurationp12"> Enter your age, weight, and height.</p>
+                                </p>
+                              </div>
+                              <div class="fle">
+                                 <p class="nutrantion__details-description nutrantion__details-icon">
+                                    <i class="ri-restaurant-fill"></i>
+                                    <p class="nutrantion__details-description nutrantion__details-icon" data-lang="nurationp13">Personalized results for your goals.</p>
+                                </p>
+                              </div>
+                              <div class="fle">
+                                 <p class="nutrantion__details-description nutrantion__details-icon">
+                                    <i class="ri-thumb-up-fill"></i>
+                                    <p  data-lang="nurationp14"> A special gift from Coach Wasim.</p>
+                                </p>
+                              </div>
+                          </div>
+      
+                          <a href="calc.html" class="button">
+                              <p data-lang="button">Get Start</p> <i class="ri-arrow-right-down-line button__icon"></i>
+                          </a>
+                      </div>
+                  </div>
+         </section> 
+         <!--==================== Contact ====================-->
+         <section class="contact section" id="contact">
+                     <div class="contact__container grid">
+                        <div class="contact__data">
+                           <h2 class="section__title-2">
+                              <span data-lang="comtact">contact me.</span>
+                           </h2>
+                              <p class="contact__description-1">
+                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos error dicta aspernatur? Accusantium, sed? Consectetur.
+                              </p>
+                              <p class="contact__description-2">
+                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates reiciendis officia culpa ipsum commodi id.
+                              </p>
+                              <div class="gometric-box"></div>
+                        </div>
+                        <div class="contact__mail">
+                           <h2 data-lang="contactsend" class="contact__title">
+                              Send Me A Message
+                           </h2>
+                           <form action="" class="contact__form" id="contact-form">
+                              <div class="contact__group">
+                                 <div class="contact__box">
+                                    <input type="text" name="user_name" class="contact__input" id="name" required placeholder="Frist Name">
+                                    <label data-lang="contactlabel1" for="name" class="contact__label">First Name</label>
+                                 </div>
+            
+                                 <div class="contact__box">
+                                    <input type="email" name="user_email" class="contact__input" id="email" required placeholder="Email Address">
+                                    <label data-lang="contactlabel2" for="email" class="contact__label">Email Address</label>
+                                 </div>
+                              </div>
+                                 <div class="contact__box">
+                                    <input type="text" name="user_subject" class="contact__input" id="subject" required placeholder="Subject">
+                                    <label data-lang="contactlabel3" for="subject" class="contact__label">Subject</label>
+                                 </div>
+            
+                                 <div class="contact__box contact__area">
+                                    <textarea name="user_message" id="message" class="contact__input" required placeholder="Message"></textarea>
+                                    <label data-lang="contactlabel4" for="message" class="contact__label">Message</label>
+                                 </div>
+                              
+                                 <p class="contact__message" id="contact-message">
+                                     
+                                 </p>
+            
+                              <button data-lang="button4" type="submit" class="contact__button button">
+                                 Send Message
+                              </button>
+                           </form>
+                        </div>
+                        <div class="contact__social">
+                           <img src="images/curved-arrow.svg" alt="" class="contact__social-arrow">
+                        <div class="contact__social-data">
+                           <div>
+                              <p data-lang="contacno" class="contact__social-description-1">
+                                 Does not send emails
+                              </p>
+                              <p data-lang="contactyes" class="contact__social-description-2">
+                                 Write me on my social networks
+                              </p>
+                           </div>
+            
+                           <div class="contact__social-links">
+                              <a href="" target="_blank" class="contact__social-link">
+                                 <i class="ri-facebook-fill"></i>
+                              </a>
+            
+                              <a href="" target="_blank" class="contact__social-link">
+                                 <i class="ri-facebook-fill"></i>
+                              </a>
+            
+                              <a href="" target="_blank" class="contact__social-link">
+                                 <i class="ri-facebook-fill"></i>
+                              </a>
+            
+                              <a href="" target="_blank" class="contact__social-link">
+                                 <i class="ri-facebook-fill"></i>
+                              </a>
+                           </div>
+                        </div>
+                        </div>
+                     </div>
+         </section> 
+         <!--==================== accordion ====================-->
+         <section class="accordion container" id="accordion">
+            <h2 data-lang="qustion" class="section__title">Frequently Asked Questions</h2>
+        
+            <div class="accordion__container">
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 data-lang="qustion1" class="accordion__title">How quickly can I see results?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p data-lang="ansswer1" class="accordion__description">
+                            You can start seeing noticeable changes in your body within a few weeks. With my customized training and nutrition plans, many clients achieve significant transformations in a short period.
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 data-lang="qustion2" class="accordion__title">Can I really transform my body?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p data-lang="ansswer2" class="accordion__description">
+                            Absolutely! I've helped numerous clients completely transform their bodies and lives. Whether you want to build muscle, lose weight, or prepare for a competition, my programs are designed to deliver results.
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 data-lang="qustion3" class="accordion__title">What makes your programs different?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p data-lang="ansswer3" class="accordion__description">
+                            My programs are personalized to fit your specific goals and lifestyle. I provide daily support and guidance to ensure you're on track, making it easier to achieve your desired body transformation.
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 data-lang="qustion4" class="accordion__title">How do you support clients during their transformation?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p data-lang="ansswer4" class="accordion__description">
+                            I offer daily WhatsApp follow-ups to provide constant motivation and adjust your plan as needed. This hands-on approach helps ensure you're making progress and staying motivated throughout your journey.
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 data-lang="qustion5" class="accordion__title">Is your program suitable for everyone?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p data-lang="ansswer5" class="accordion__description">
+                            Yes, my programs are tailored to fit individual needs, whether you're a beginner or an experienced athlete. I work closely with each client to ensure they achieve their body transformation goals safely and effectively.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+         
+              
+      </main>
+
+      <!--==================== FOOTER ====================-->
+       <footer class="footer">
+         <div class="row">
+            <div class="col">
+               <a href="#home">
+                  <img src="images/logo w.fit-09.png" alt="" class="logo">
+               </a>
+               <p data-lang="footerp">Coach Wasim Hassan: NBC champion and expert in quick, effective fitness transformations.</p>
+            </div>
+            <div class="col">
+               <h3 data-lang="footerh31">Main Menu<div class="underline"><span></span></div></h3></h3>
+               <ul>
+                  <li><a data-lang="home" href="#home">Home</a></li>
+                  <li><a data-lang="Transformation" href="#tranding">Transformation</a></li>
+                  <li><a data-lang="Pricing" href="#pricing">Pricing</a></li>
+                  <li><a data-lang="footer" href="#footer">Footer</a></li>
+               </ul>
+            </div>
+            <div class="col">
+               <h3 data-lang="footerh32">Information<div class="underline"><span></span></div></h3></h3>
+               <ul>
+                  <li><a data-lang="About" href="#about">About</a></li>
+                  <li><a data-lang="accordion" href="#accordion">FAQs</a></li>
+                  <li><a data-lang="Testimonial" href="about.html#testimonial">Testimonial</a></li>
+                  <li><a data-lang="Contact" href="#contact">Contact</a></li>
+               </ul>
+            </div>
+            <div class="col">
+               <h3 data-lang="footerh33">Social Media <div class="underline"><span></span></div></h3></h3>
+               <!-- <form>
+                  <input type="email" placeholder="Enter your email id" required>
+               </form> -->
+               <div class="contact__social-links">
+                  <a href="https://www.instagram.com/wassimhs1/?g=5" target="_blank" class="contact__social-link">
+                     <i class="ri-instagram-fill"></i>
+                  </a>
+
+                  <a href="https://www.youtube.com/@wassim_hassan" target="_blank" class="contact__social-link">
+                     <i class="ri-youtube-fill"></i>
+                  </a>
+
+                  <a href="https://www.facebook.com/IFBB.ProWassemHassan?mibextid=JRoKGi&rdid=Vxi2LeIscSTtys3y&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FRzSpt5TZCL9JzQkN%2F%3Fmibextid%3DJRoKGi" target="_blank" class="contact__social-link">   
+                     <i class="ri-facebook-circle-fill"></i>
+                  </a>
+
+                  <a href="https://www.tiktok.com/@ifbbprowassimhassan?_t=8nTAgnInKBk&_r=1" target="_blank" class="contact__social-link">
+                     <i class="ri-tiktok-fill"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <hr>
+         <p class="copyright">Created By <a class="moalrmaly" href="#">MOAlramaly</a> @2023-All Rights Reserved</p>
+
+      </footer> 
+
+      <!--=============== SCROLL UP ===============-->
+      <a href="#" class="scrollup" id="scroll-up">
+         <i class="ri-arrow-up-double-fill"></i>
+     </a>
+
+      <!--========== SCROLL UP ==========-->
+      <!-- <script src="js/nav.js"></script> -->
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      <script src="js/swiper-bundle.min.js"></script>
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+      <script src="js/language.js"></script>
+                <!--=============== MAIN JS ===============-->
+                <script src="js/main.js"></script> 
+
+   </body>
+</html>

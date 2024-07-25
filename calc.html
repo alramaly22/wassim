@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="images/logo w.fit-09.png" type="image/x-icon">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+      <!--=============== SWIPER CSS ===============--> 
+      <link rel="stylesheet" href="css/swiper-bundle.min.css">
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/master.css">
+      
+
+
+      <title>Calc</title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+        
+         <nav class="nav container">
+            <a href="index.html" class="logo">
+               <img src="images/logo w.fit-11.png" alt="">
+            </a>
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="index.html#home" class="nav__link">Home</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="index.html#about" class="nav__link">About</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="index.html#tranding" class="nav__link">Transformation</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="index.html#pricing" class="nav__link">Pricing</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="index.html#contact" class="nav__link">Contact</a>
+                  </li>
+               </ul>
+               <div class="nav__social">
+                  <a href="https://www.facebook.com/IFBB.ProWassemHassan?mibextid=JRoKGi&rdid=Vxi2LeIscSTtys3y&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FRzSpt5TZCL9JzQkN%2F%3Fmibextid%3DJRoKGi" target="_blank" class="nav__social-link">
+                     <i class="ri-facebook-circle-fill"></i>
+                  </a>
+                  <a href="https://www.instagram.com/wassimhs1/?g=5" target="_blank" class="nav__social-link">
+                     <i class="ri-instagram-fill"></i>
+                  </a>
+                  <a href="https://www.youtube.com/@wassim_hassan" target="_blank" class="nav__social-link">
+                     <i class="ri-youtube-fill"></i>
+                  </a>
+                  <a href="https://www.tiktok.com/@ifbbprowassimhassan?_t=8nTAgnInKBk&_r=1" target="_blank" class="nav__social-link">
+                     <i class="ri-tiktok-fill"></i>
+                  </a>
+               </div>
+               <!--   CLOSE BUTTON  -->
+                  <div class="nav__close" id="nav-close">
+                     <i class="ri-eye-close-fill"></i>
+                  </div>
+            </div>
+                           <!--   Toggle button  -->
+             <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-fold-2-fill"></i>
+             </div>
+            
+         </nav>
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+       <section class="section calc">
+         <div class="bmr-calculator">
+            <h2>BMR Calculator</h2>
+            <div class="controls">
+              <form>
+                <h3>Age (10 - 100)</h3>
+                <input type="text" id="age" value="28" />
+      
+                <div class="gender">
+                  <h3>Gender</h3>
+                  <input type="radio" id="male" value="male" name="gender" checked />
+                  <label for="male">Male</label>
+                  <input type="radio" id="female" value="female" name="gender" />
+                  <label for="female">Female</label>
+                </div>
+      
+                <div class="height">
+                  <h3>Height</h3>
+                  <input type="text" id="height" value="180" />
+                  <div class="unit">cm</div>
+                </div>
+      
+                <div class="weight">
+                  <h3>Weight</h3>
+                  <input type="text" id="weight" value="65" />
+                  <div class="unit">kg</div>
+                </div>
+              </form>
+            </div>
+      
+            <div class="result">
+              <button class="calculate-btn button">Calculate</button>
+      
+              <div class="result-message">
+                <span class="calories">1,640</span> Calories/day
+              </div>
+      
+              <div class="error-message">
+                <p>Please enter all the details correctly.</p>
+              </div>
+            </div>
+          </div>
+       </section>
+      </main>
+
+      <!--==================== FOOTER ====================-->
+      <!-- <footer class="footer">
+         <div class="row">
+            <div class="col">
+               <img src="images/logo w.fit-09.png" alt="" class="logo">
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe amet maiores aliquid error eaque placeat.</p>
+            </div>
+            <div class="col">
+               <h3>office <div class="underline"><span></span></div></h3></h3>
+               <p>ITPL Road</p>
+               <p>Whitefield, Bangalore</p>
+               <p>Karnataka, PIN 560066, India</p>
+               <p class="email-id">moalramly@gmaill.com</p>
+               <h4>+91 - 01023456789</h4>
+            </div>
+            <div class="col">
+               <h3>Links <div class="underline"><span></span></div></h3></h3>
+               <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Transformation</a></li>
+                  <li><a href="#">Tesamentiol</a></li>
+                  <li><a href="#">Faqs</a></li>
+                  <li><a href="#">Footer</a></li>
+               </ul>
+            </div>
+            <div class="col">
+               <h3>Newsletter <div class="underline"><span></span></div></h3></h3>
+               <form>
+                  <input type="email" placeholder="Enter your email id" required>
+               </form>
+               <div class="social-icon">
+                  <a href="https://www.facebook.com/drmoqadi" class="fab fa-facebook-f"></a>
+                  <a href="https://www.instagram.com/mo.qadi/?hl=en"  class="fab fa-brands fa-instagram"></a>
+                  <a href="https://wa.me/971569014104"  class="fab fa-whatsapp"></a>
+                  <a href="https://www.tiktok.com/@drqadi"  class="fab fa-brands fa-tiktok"></a>
+
+              </div>
+            </div>
+         </div>
+         <hr>
+         <p class="copyright">Created By <a class="moalrmaly" href="#">MOAlramaly</a> @2023-All Rights Reserved</p>
+
+      </footer> -->
+
+      <!--========== SCROLL UP ==========-->
+      <script src="js/calc.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      <script src="js/swiper-bundle.min.js"></script>
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+      
+      <!--=============== MAIN JS ===============-->
+      <script src="js/main.js"></script>
+   </body>
+</html>
