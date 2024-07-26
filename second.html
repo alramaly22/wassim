@@ -45,44 +45,72 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+   
+    #language-selector {
+       appearance: none;
+        font-weight: bolder;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-size: cover;
+        background-position: center;
+        color: white;
+        border: none;
+        background:#b4862c;
+        padding: 10px;
+        border-radius: 1rem 0;
+        cursor: pointer;
+        outline: none;
+    }
+    
+    #language-selector option {
+      color: #000;
+    }
+    </style>
 </head>
 
 <body>
 
   <body class="block--dark">
+
     <nav class="nav collapsible nav__form collapsible--expanded">
       <a class="nav__brand" href="index.html">
         <img src="images/logo w.fit-11.png" alt="" / class="lllo">
       </a>
+      <select  name="" id="language-selector">
+        <i class="fa-solid fa-earth-oceania"></i>
+        <option value="en" selected>En</option>
+        <option value="ar">Ar</option>
+    </select>
       <img class="nav__toggler" src="SVJ/menu-symbol-of-three-parallel-lines-svgrepo-com (1).svg" alt="">
       <!-- <svg class="icon icon--white nav__toggler">
           <use xlink:href="images/sprite.svg#menu"></use>
         </svg> -->
       <ul class="list nav__list collapsible__content">
         <li class="nav__item">
-          <a href="index.html" class="nav__link">Home</a>
+          <a href="index.html" class="nav__link" data-lang="home">Home</a>
       </li>
       <li class="nav__item">
-          <a href="about.html" class="nav__link">About</a>
+          <a href="about.html" class="nav__link" data-lang="About">About</a>
       </li>
       <li class="nav__item">
-          <a href="index.html" class="nav__link">Transformation</a>
+          <a href="index.html" class="nav__link" data-lang="Transformation">Transformation</a>
       </li>
       <li class="nav__item">
-        <a href="pricing.html" class="nav__link">Pricing</a>
+        <a href="pricing.html" class="nav__link" data-lang="Pricing">Pricing</a>
           
       </li>
       <li class="nav__item">
-        <a href="calc.html" class="nav__link">Calc</a>
+        <a href="calc.html" class="nav__link" data-lang="calc">Calc</a>
       </li>
-
       </ul>
+      
     </nav>
 
     <form name="myForm" method="post">
       <section class="block container block-form" data-aos="fade-down">
         <header class="block__header">
-          <h2 data-aos="fade-down">General Info</h2>
+          <h2 data-aos="fade-down" data-lang="general">General Info</h2>
         </header>
         <div class="border-animation">
           <span class="form-span"></span>
@@ -92,7 +120,7 @@
                 <img class="kolo" src="SVJ/user-card-id-svgrepo-com.svg" alt="">
                 
               </span>
-              <input class="input name" name="Name" type="text" placeholder="Name" required />
+              <input class="input name" name="Name" type="text" placeholder="Name / الاسم" required />
             </div>
 
                     <!-- <div class="input-group">
@@ -115,9 +143,9 @@
               <div class="Gander__input">
                 <label class="radio--style"><input class="input__radio" type="radio" name="Gender" id="Gender"
                     value="Male" required /></label>
-                <label class="input__radio-lable" for="meal1">Male</label>
+                <label class="input__radio-lable" for="meal1" data-lang="male">Male</label>
                 <input class="input__radio" type="radio" name="Gender" id="Gender" value="Female" />
-                <label class="input__radio-lable" for="meal2">Female</label>
+                <label class="input__radio-lable" for="meal2" data-lang="female">Female</label>
               </div>
             </div>
 
@@ -128,7 +156,7 @@
                     <use xlink:href="images/sprite3.svg#age"></use>
                   </svg> -->
               </span>
-              <input class="input" name="Age" type="text" placeholder="Age" required id="age" />
+              <input class="input" name="Age" type="text" placeholder="Age / العمر" required id="age" />
             </div>
 
             <div class="input-group">
@@ -138,7 +166,7 @@
                     <use xlink:href="images/sprite3.svg#weight"></use>
                   </svg> -->
               </span>
-              <input class="input" name="Weight" type="text" placeholder="Weight" required step="any" id="weight" />
+              <input class="input" name="Weight" type="text" placeholder="Weight / الوزن" required step="any" id="weight" />
             </div>
 
             <div class="input-group">
@@ -148,38 +176,30 @@
                     <use xlink:href="images/sprite3.svg#height"></use>
                   </svg> -->
               </span>
-              <input class="input" name="Height" type="text" placeholder="Height (Cm)" required step="any"
-                id="height" />
+              <input class="input" name="Height" type="text" placeholder="Height (Cm) / الطول (سم)" required step="any" id="height" />
+
             </div>
 
             <div class="input-group">
               <span class="icon-container">
                 <img src="SVJ/wake-up-bed-svgrepo-com.svg" alt="" class="kolo">
               </span>
-              <input class="input" name="Wake up time" type="text" placeholder="Wake up time" required step="any" id="neck" />
+              <input class="input" name="Wake up time" type="text" placeholder="Wake up time / وقت الاستيقاظ" required step="any" id="neck" />
             </div>
 
             <div class="input-group">
               <span class="icon-container">
                 <img src="SVJ/rest-time-svgrepo-com.svg" alt="" class="kolo">
               </span>
-              <input class="input" name="sleep time" type="text" placeholder="sleep time" required step="any"
-                id="waist" />
+              <input class="input" name="sleep time" type="text" placeholder="Sleep time / وقت النوم" required step="any" id="waist" />
             </div>
-
-            <!-- <div class="input-group">
-              <span class="icon-container">
-                <img src="SVJ/arm-svgrepo-com.svg" alt="" class="kolo">
-              </span>
-              <input class="input" name="Arm (cm)" type="text" placeholder="Arm (Cm)" required step="any" id="arm" />
-            </div> -->
           </div>
         </div>
       </section>
 
       <section class="block container block-form-part2 block-form-part4" data-aos="fade-up">
         <header class="block__header">
-          <h2>Other</h2>
+          <h2 data-lang="other">Other</h2>
         </header>
         <div class="border-animation">
           <span class="form-span"></span>
@@ -188,10 +208,10 @@
               <span class="icon__question">
                 <img class="koloh" src="SVJ/goal-svgrepo-com.svg" alt="">
               </span>
-              <p class="form__question">Goal of training ?</p>
+              <p class="form__question" data-lang="goal">Goal of training ?</p>
               <div class="input__textarea">
-                <textarea class="" placeholder="Goal of training ?" id="describes your nutrition"
-                  name="Goal of training ?" rows="5" cols="33"></textarea>
+                <textarea class="" placeholder="Goal of training? / هدف التدريب؟" id="describes-your-nutrition" name="Goal of training ?" rows="5" cols="33"></textarea>
+
               </div>
             </div>
 
@@ -199,10 +219,10 @@
               <span class="icon__question">
                 <img class="koloh" src="SVJ/smiley-nervous-thin-svgrepo-com.svg" alt="">
               </span>
-              <p class="form__question">The right cardio schedule for you?</p>
+              <p class="form__question" data-lang="cardio">The right cardio schedule for you?</p>
               <div class=" input__textarea">
-                <textarea class="" placeholder="The right cardio schedule for you" id="eating disorder"
-                  name="The right cardio schedule for you?" rows="5" cols="33" required></textarea>
+                <textarea class="" placeholder="The right cardio schedule for you / جدول الكارديو المناسب لك" id="eating-disorder" name="The right cardio schedule for you?" rows="5" cols="33" required></textarea>
+
               </div>
             </div>
 
@@ -210,20 +230,20 @@
               <span class="icon__question">
                 <img class="koloh" src="SVJ/treadmill-round-svgrepo-com.svg" alt="">
               </span>
-              <p class="form__question">Last period of training? </p>
+              <p class="form__question" data-lang="period">Last period of training? </p>
               <div class=" input__textarea">
-                <textarea class="" placeholder="Last period of training?" id="ambitious"
-                  name="Last period of training?" rows="5" cols="33"></textarea>
+                <textarea class="" placeholder="Last period of training? / آخر فترة تدريب؟" id="ambitious" name="Last period of training?" rows="5" cols="33"></textarea>
+
               </div>
             </div>
             <div class="question--block">
               <span class="icon__question">
                 <img class="koloh" src="SVJ/meal-svgrepo-com.svg" alt="">
               </span>
-              <p class="form__question">Number of meals a day ?</p>
+              <p class="form__question" data-lang="meals">Number of meals a day ?</p>
               <div class=" input__textarea">
-                <textarea class="" placeholder="Number of meals a day?" id="ambitious"
-                  name="Number of meals a day ?" rows="5" cols="33" required></textarea>
+                <textarea class="" placeholder="Number of meals a day? / عدد الوجبات في اليوم؟" id="ambitious" name="Number of meals a day ?" rows="5" cols="33" required></textarea>
+
               </div>
             </div>
           </div>
@@ -233,7 +253,7 @@
 
       <section class="block container block-form-part2 block-form-part3" data-aos="fade-up">
         <header class="block__header">
-          <h2>Workout</h2>
+          <h2 data-lang="workout">Workout</h2>
         </header>
         <div class="border-animation">
           <span class="form-span"></span>
@@ -243,10 +263,10 @@
                 <img class="koloh" src="SVJ/workout-list-svgrepo-com.svg" alt="">
             
               </span>
-              <p class="form__question">What is Your Daily Routine ?</p>
+              <p class="form__question" data-lang="routine">What is Your Daily Routine ?</p>
               <div class="input__textarea">
-                <textarea class="" placeholder="Day Routine" id="Day Routine" name="Day Routine" rows="5"
-                  cols="33"></textarea>
+                <textarea class="" placeholder="Day Routine | روتين اليوم" id="Day Routine" name="Day Routine" rows="5"></textarea>
+
               </div>
             </div>
 
@@ -256,11 +276,11 @@
                   alt="">
                
               </span>
-              <p class="form__question">Do you have health problems?</p>
+              <p class="form__question" data-lang="health">Do you have health problems?</p>
 
               <div class="input__textarea">
-                <textarea class="" placeholder="Do you have health problems?" id="Injury" name="Do you have health problems?" rows="5"
-                  cols="33" required></textarea>
+                <textarea class="" placeholder="Do you have health problems? / هل لديك مشاكل صحية؟" id="Injury" name="Do you have health problems?" rows="5" cols="33" required></textarea>
+
               </div>
             </div>
 
@@ -269,18 +289,18 @@
                 <img class="koloh" src="SVJ/training-running-run-svgrepo-com.svg" alt="">
 
               </span>
-              <p class="form__question">
+              <p class="form__question" data-lang="exercise">
                 How many days a week will you exercise?
               </p>
               <div class="input__number">
-                <input class="input" name="How many days a week will you exercise?" type="text"
-                  placeholder="How many days a week will you exercise?" required id="days" />
+                <input class="input" name="How many days a week will you exercise?" type="text" placeholder="How many days a week will you exercise? / كم يومًا في الأسبوع ستقوم بممارسة الرياضة؟" required id="days" />
+
               </div>
             </div>
           </div>
         </div>
         <div class="block container sumbit-btn">
-          <button type="button" id="submitBtn" class="btn btn--white btn--stretched" onclick="sendToWhatsApp()">
+          <button type="button" id="submitBtn" class="btn btn--white btn--stretched" onclick="sendToWhatsApp()" data-lang="send">
             Submit
           </button>
         </div>
@@ -550,6 +570,6 @@
     </script>
     <!-- </html> -->
   </body>
-  <script src=""></script>
+  <script src="js/language.js"></script>
 
 </html>
