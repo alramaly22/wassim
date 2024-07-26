@@ -1418,17 +1418,18 @@ a:active {
 }
 /* تحديد مكان النص للغة العربية فقط */
 .arabic-font {
-  text-align: end;
-
-  font-family: 'Noto Kufi Arabic', sans-serif;
-}
+  direction:  rtl;
+  text-align: right;
+  font-family: 'Amiri', serif;}
 .second-arabic-font{
-text-align: end;
+  direction:  rtl;
+  text-align: right;
 font-family: 'Cairo', sans-serif;
 }
 .se-arab{
-  
-  text-align:center;
-  font-family: 'Noto Kufi Arabic', sans-serif;
-}
+  direction:  rtl;
+  text-align: center;
+  font-family: 'Amiri', serif;}
+
+
 
