@@ -88,6 +88,21 @@ let lang = {
         testimonialname3:"فيصل القاسمي",
         testimonialp3:"من أفضل القرارات. دعم وإلهام لا مثيل لهما. لا تفوت الفرصة - انضم إلينا وشارك إنجازاتك",
     
+
+    calc: "معدل الأيض الأساسي",
+    general: "معلومات عامة",
+    male: "ذكر",
+    female: "أنثى",
+    other: "أخرى",
+    goal: "هدف التدريب؟",
+    cardio: "جدول الكارديو المناسب لك؟",
+    period: "مدة التدريب الأخيرة؟",
+    meals: "عدد الوجبات في اليوم؟",
+    workout: "تمرين",
+    routine: "ما هو روتينك اليومي؟",
+    health: "هل لديك مشاكل صحية؟",
+    exercise: "كم يوماً في الأسبوع ستمارس التمارين؟",
+    send: "إرسال"
     },
     en: {
         home: "Home",
@@ -177,6 +192,22 @@ let lang = {
         testimonialp2:"Transformative experience with an excellent trainer. Your story matters here. Join, share, and let's empower each other!",
         testimonialname3:"Faisal Al Qassimi",
         testimonialp3:"One of the best decisions. Unparalleled support and inspiration. Don't miss out—join us and share your achievements!",
+        
+        calc:"BMr",
+        general:"General Info",
+        male:"Male",
+        female:"Female",
+        other:"Other",
+        goal:"Goal of training ?",
+        cardio:"The right cardio schedule for you?",
+        period:"Last period of training?",
+        meals:"Number of meals a day ?",
+        workout:"Workout",
+        routine:"What is Your Daily Routine ?",
+        health:"Do you have health problems?",
+        exercise:"How many days a week will you exercise?",
+        send:"Submit",
+
     }
 };
 
@@ -246,4 +277,6 @@ function updateLanguage() {
         testimonialSection.style.direction = 'ltr';
         testimonialSection.style.textAlign = 'left';
     }
+
+
 }
