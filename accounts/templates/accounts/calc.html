@@ -1,0 +1,181 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/logo1.png' %}"
+      type="image/x-icon"
+    />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}" />
+    <!--=============== CSS ===============-->
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'css/master.css' %}" />
+
+    <title>Calc</title>
+  </head>
+  <body>
+    <div id="preloader"></div>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="{% url 'index' %}" class="logo">
+          <img src="{% static 'images/logo1.png' %}" alt="" />
+        </a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="{% url 'index' %}#home" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="{% url 'index' %}#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="{% url 'index' %}#tranding" class="nav__link"
+                >Transformation</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="{% url 'index' %}#pricing" class="nav__link">Pricing</a>
+            </li>
+            <li class="nav__item">
+              <a href="{% url 'index' %}#contact" class="nav__link">Contact</a>
+            </li>
+          </ul>
+
+          <div class="nav__social">
+            <a
+              href="https://www.facebook.com/IFBB.ProWassemHassan?mibextid=JRoKGi&rdid=Vxi2LeIscSTtys3y&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FRzSpt5TZCL9JzQkN%2F%3Fmibextid%3DJRoKGi"
+              target="_blank"
+              class="nav__social-link"
+            >
+              <i class="ri-facebook-circle-fill"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/wassimhs1/?g=5"
+              target="_blank"
+              class="nav__social-link"
+            >
+              <i class="ri-instagram-fill"></i>
+            </a>
+            <a
+              href="https://www.youtube.com/@wassim_hassan"
+              target="_blank"
+              class="nav__social-link"
+            >
+              <i class="ri-youtube-fill"></i>
+            </a>
+            <a
+              href="https://www.tiktok.com/@ifbbprowassimhassan?_t=8nTAgnInKBk&_r=1"
+              target="_blank"
+              class="nav__social-link"
+            >
+              <i class="ri-tiktok-fill"></i>
+            </a>
+          </div>
+          <!--   CLOSE BUTTON  -->
+          <div class="nav__close" id="nav-close">
+            <i class="ri-eye-close-fill"></i>
+          </div>
+        </div>
+        <!--   Toggle button  -->
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-fold-2-fill"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <section class="section calc">
+        <div class="bmr-calculator">
+          <h2>BMR Calculator</h2>
+          <div class="controls">
+            <form>
+              <h3>Age (10 - 100)</h3>
+              <input type="text" id="age" value="28" />
+
+              <div class="gender">
+                <h3>Gender</h3>
+                <input
+                  type="radio"
+                  id="male"
+                  value="male"
+                  name="gender"
+                  checked
+                />
+                <label for="male">Male</label>
+                <input type="radio" id="female" value="female" name="gender" />
+                <label for="female">Female</label>
+              </div>
+
+              <div class="height">
+                <h3>Height</h3>
+                <input type="text" id="height" value="180" />
+                <div class="unit">cm</div>
+              </div>
+
+              <div class="weight">
+                <h3>Weight</h3>
+                <input type="text" id="weight" value="65" />
+                <div class="unit">kg</div>
+              </div>
+            </form>
+          </div>
+
+          <div class="result">
+            <button class="calculate-btn button">Calculate</button>
+
+            <div class="result-message">
+              <span class="calories">1,640</span> Calories/day
+            </div>
+
+            <div class="error-message">
+              <p>Please enter all the details correctly.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== SCROLL UP ===============-->
+    <!-- <script src="js/calc.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script> -->
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="{% static 'js/calc.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>

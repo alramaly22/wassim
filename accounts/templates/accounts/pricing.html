@@ -1,0 +1,806 @@
+{% load static %}
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="{% static 'images/logo1.png' %}" type="image/x-icon">
+  
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+      <!--=============== SWIPER CSS ===============--> 
+      <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+      <!--=============== CSS ===============-->
+      <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+      <link rel="stylesheet" href="{% static 'css/master.css' %}">
+      
+      <style>
+        .containero {
+  max-width: 124rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* .section-heading {
+  font-size: 3rem;
+  color: var(--my-color);
+  padding: 2rem 0;
+} */
+
+#tranding {
+  padding: 4rem 0;
+}
+
+@media (max-width:1440px) {
+  #tranding {
+    padding: 7rem 0;
+  }
+}
+
+#tranding .tranding-slider {
+  height: 38rem;
+  padding: 2rem 0;
+  position: relative;
+}
+
+@media (max-width:500px) {
+  #tranding .tranding-slider {
+    height: 35rem;
+  }
+}
+
+.tranding-slide {
+  width: 37rem;
+  height: 42rem;
+  position: relative;
+}
+
+@media (max-width:500px) {
+  .tranding-slide {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+  .tranding-slide .tranding-slide-img img {
+    width: 28rem !important;
+    height: 25rem !important;
+    object-fit: contain;
+    transition: transform 0.3s; /* إضافة انتقال لتنعيم التأثير */
+  }
+  .tranding-slide .tranding-slide-img img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  
+}
+
+.tranding-slide .tranding-slide-img img {
+  width: 37rem;
+  height: 30rem;
+  border-radius: 2rem;
+  /* object-fit: contain; */
+}
+.tranding-slide .tranding-slide-img img:hover{
+  transform: scale(1.1)
+}
+
+.tranding-slide .tranding-slide-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.tranding-slide-content .food-price {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: var(--white);
+}
+
+.tranding-slide-content .tranding-slide-content-bottom {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: var(--white);
+}
+
+.food-rating {
+  padding-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.rating ion-icon {
+  color: var(--my-color);
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.tranding-slider-control {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tranding-slider-control .swiper-button-next {
+  left: 65% !important;
+  transform: translateX(-58%) !important;
+}
+
+@media (max-width:990px) {
+  .tranding-slider-control .swiper-button-next {
+    left: 80% !important;
+    transform: translateX(-70%) !important;
+  }
+}
+
+@media (max-width:450px) {
+  .tranding-slider-control .swiper-button-next {
+    left: 90% !important;
+    transform: translateX(-80%) !important;
+  }
+}
+
+@media (max-width:990px) {
+  .tranding-slider-control .swiper-button-prev {
+    left: 20% !important;
+    transform: translateX(-30%) !important;
+  }
+}
+
+@media (max-width:450px) {
+  .tranding-slider-control .swiper-button-prev {
+    left: 11% !important;
+    transform: translateX(-20%) !important;
+  }
+}
+
+.tranding-slider-control .slider-arrow {
+  background: var(--gradient-color);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  left: 35%;
+  transform: translateX(-42%);
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.tranding-slider-control .slider-arrow ion-icon {
+  font-size: 2rem;
+  color: var(--first-color);
+}
+
+.tranding-slider-control .slider-arrow::after {
+  content: '';
+}
+
+.tranding-slider-control .swiper-pagination {
+  position: relative;
+  width: 15rem;
+  bottom: 0rem;
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--first-color);
+}
+      </style>
+
+
+<style>
+   
+#language-selector {
+   appearance: none;
+    font-weight: bolder;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-size: cover;
+    background-position: center;
+    color: var(--body-color);
+    border: none;
+    background: var(--first-color);
+    padding: 10px;
+    border-radius: 1rem 0;
+    cursor: pointer;
+    outline: none;
+}
+
+#language-selector option {
+  color: #000;
+}
+</style>
+
+      <title>Wissam</title>
+   </head>
+   <body>
+    <div id="preloader"></div>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+        
+         <nav class="nav container">
+            <a href="{% url 'index' %}" class="logo">
+               <img src="{% static 'images/logo1.png' %}" alt="">
+            </a>
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#home" class="nav__link" data-lang="home">Home</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#tranding" class="nav__link" data-lang="Transformation">Transformation</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#pricing" class="nav__link" data-lang="Pricing">Pricing</a>
+                  </li>
+                   <li class="nav__item">
+                     <a href="#contact" class="nav__link" data-lang="Contact">Contact</a>
+                  </li> 
+                  <li class="nav__item">
+                     <a href="#accordion" class="nav__link" data-lang="accordion">FAQs</a>
+                  </li>
+               </ul>
+               <div class="nav__social">
+                  <a href="https://www.facebook.com/IFBB.ProWassemHassan?mibextid=JRoKGi&rdid=Vxi2LeIscSTtys3y&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FRzSpt5TZCL9JzQkN%2F%3Fmibextid%3DJRoKGi" target="_blank" class="nav__social-link">
+                     <i class="ri-facebook-circle-fill"></i>
+                  </a>
+                  <a href="https://www.instagram.com/wassimhs1/?g=5" target="_blank" class="nav__social-link">
+                     <i class="ri-instagram-fill"></i>
+                  </a>
+                  <a href="https://www.youtube.com/@wassim_hassan" target="_blank" class="nav__social-link">
+                     <i class="ri-youtube-fill"></i>
+                  </a>
+                  <a href="https://www.tiktok.com/@ifbbprowassimhassan?_t=8nTAgnInKBk&_r=1" target="_blank" class="nav__social-link">
+                     <i class="ri-tiktok-fill"></i>
+                  </a>
+               </div>
+               <!--   CLOSE BUTTON  -->
+                  <div class="nav__close" id="nav-close">
+                     <i class="ri-eye-close-fill"></i>
+                  </div>
+            </div>
+                           <!--   Toggle button  -->
+                           <div class="nav__buttons">
+                              <i class="ri-moon-fill change-theme" id="theme-button"></i>
+                     
+                                  <div class="nav__toggle" id="nav-toggle">
+                                    <i class="ri-menu-fold-2-fill"></i>
+                     
+                                  </div>
+                                  <select  name="" id="language-selector">
+                                    <i class="fa-solid fa-earth-oceania"></i>
+                                    <option value="en" selected>En</option>
+                                    <option value="ar">Ar</option>
+                                </select>
+                                 </div>
+            
+         </nav>
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+
+        <!--==================== HOME ====================-->
+        <section class="home" id="home" data-aos="fade-left">
+         <div class="video-container">
+            <video class="home__video" autoplay muted loop>
+                <source src="{% static 'videos/v1.mp4' %}" type="video/mp4">
+            </video>
+            
+           
+             <div class="video-overlay"></div>
+         </div>
+         <div class="home__img2">
+
+         </div>
+         <div class="home__container container grid">
+             <div class="home__data">
+                 <h1 class="home__title">
+               
+                  <p data-lang="home222">Get fit with Wassim </p> <p data-lang="home221">Join us today!</p>
+                 </h1>
+                 
+             </div>
+
+             <div class="home__social" >
+                 <span class="home__social-follow">Follow Us</span>
+
+                 <div class="home__social-links">
+                     <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                         <i class="ri-facebook-fill"></i>
+                     </a>
+                     <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                         <i class="fa-brands fa-tiktok"></i>
+                     </a>
+                     <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                         <i class="ri-instagram-line"></i>
+                     </a>
+                     <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                         <i class="ri-youtube-fill"></i>
+                     </a>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+
+                  <div class="wrapper" data-aos="fade-right">
+                     <div class="containere">
+                        <i class="ri-youtube-fill"></i>
+                        <span class="num" data-val="14">00K</span>
+                        <!-- <span class="text">Followers</span> -->
+                     </div>
+                     <div class="containere">
+                        <i class="ri-tiktok-fill"></i>
+                        <span class="num" data-val="40">00K</span>
+                        <!-- <span class="text">Followers</span> -->
+                     </div>
+                     <div class="containere">
+                        <i class="ri-facebook-fill"></i>
+                        <span class="num" data-val="30">00K</span>
+                        <!-- <span class="text">Followers</span> -->
+                     </div>
+                     <div class="containere">
+                        <i class="ri-instagram-line"></i>
+                        <span class="num" data-val="32">00K</span>
+                        <!-- <span class="text">Followers</span> -->
+                     </div>
+               </div>
+               <!--==================== FAVORITE ====================-->
+               <section id="tranding" data-aos="fade-left">
+                  <div class="containero">
+                      <h3 data-lang="transformation" class="section__title">Transformation</h3>
+                  </div>
+                  <div class="containero">
+                      <div class="swiper tranding-slider">
+                          <div class="swiper-wrapper">
+                              <div class="swiper-slide tranding-slide">
+                                  <div class="tranding-slide-img">
+                                      <img src="{% static 'images/trans25.png' %}" alt="Tranding">
+                                  </div>
+                                  <div class="tranding-slide-content">
+                                      <div class="tranding-slide-content-bottom">
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <div class="swiper-slide tranding-slide">
+                                  <div class="tranding-slide-img">
+                                      <img src="{% static 'images/trans2.jpg' %}" alt="Tranding">
+                                  </div>
+                                  <div class="tranding-slide-content">
+                                      <div class="tranding-slide-content-bottom">
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <div class="swiper-slide tranding-slide">
+                                  <div class="tranding-slide-img">
+                                      <img src="{% static 'images/trans3.jpg' %}" alt="Tranding">
+                                  </div>
+                                  <div class="tranding-slide-content">
+                                      <div class="tranding-slide-content-bottom">
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <div class="swiper-slide tranding-slide">
+                                  <div class="tranding-slide-img">
+                                      <img src="{% static 'images/trans10.jpg' %}" alt="Tranding">
+                                  </div>
+                                  <div class="tranding-slide-content">
+                                      <div class="tranding-slide-content-bottom">
+                                          <h3 class="food-rating">
+                                          </h3>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <div class="swiper-slide tranding-slide">
+                                  <div class="tranding-slide-img">
+                                      <img src="{% static 'images/trans14.jpg' %}" alt="Tranding">
+                                  </div>
+                                  <div class="tranding-slide-content">
+                                      <div class="tranding-slide-content-bottom">
+                                          <h3 class="food-rating">
+                                          </h3>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <div class="swiper-slide tranding-slide">
+                                  <div class="tranding-slide-img">
+                                      <img src="{% static 'images/trans19.jpg' %}" alt="Tranding">
+                                  </div>
+                                  <div class="tranding-slide-content">
+                                      <div class="tranding-slide-content-bottom">
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <div class="swiper-slide tranding-slide">
+                                  <div class="tranding-slide-img">
+                                      <img src="{% static 'images/trans5.jpg' %}" alt="Tranding">
+                                  </div>
+                                  <div class="tranding-slide-content">
+                                      <div class="tranding-slide-content-bottom">
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <div class="swiper-slide tranding-slide">
+                                  <div class="tranding-slide-img">
+                                      <img src="{% static 'images/trans21.jpg' %}" alt="Tranding">
+                                  </div>
+                                  <div class="tranding-slide-content">
+                                      <div class="tranding-slide-content-bottom">
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                  
+                          <div class="tranding-slider-control">
+                              <div class="swiper-button-prev slider-arrow">
+                                  <ion-icon name="arrow-back-outline"></ion-icon>
+                              </div>
+                              <div class="swiper-button-next slider-arrow">
+                                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                              </div>
+                              <div class="swiper-pagination"></div>
+                          </div>
+                  
+                      </div>
+                  </div>
+              </section> 
+         <!--==================== pricing ====================-->
+         <section class="pricing section" id="pricing" data-aos="fade-right">
+            <div class="container">
+                <div class="section__data">
+                    <div class="section__titles">
+                        <h1 data-lang="pricingtitle" class="section__title se-arab">Pricing</h1>
+                    </div>
+                </div>
+        
+                <div class="pricing__container grid">
+                    <article class="pricing__card article1">
+                        <header class="pricing__header">
+                            <div class="pricing__shape">
+                                <img src="{% static 'icon/3.svg' %}" alt="" class="pricing__img">
+                            </div>
+                            <h1 data-lang="pricingtitle1" class="pricing__title">BASIC PACKAGE</h1>
+                            <h2 data-lang="pricingpackage1" class="pricing__number">3 month / $600</h2>
+                        </header>
+                        <ul class="pricing__list">
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli1">Training Program</p>
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli2">Daily WhatsApp Follow-up</p>
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli3">Nutritional Program</p>
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli4">Dietary Supplements</p>
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli5">Performance Enhancers</p>
+                            </li>
+                        </ul>
+                        <a data-lang="button3" href="#" class="button button__flex pricing__button">
+                            Purchase Now
+                        </a>
+                    </article>
+        
+                    <article class="pricing__card article2">
+                        <header class="pricing__header">
+                            <div class="pricing__shape">
+                                <img src="{% static 'icon/2.svg' %}" alt="" class="pricing__img">
+                            </div>
+                            <h1 data-lang="pricingtitle2" class="pricing__title">PREMIUM PACKAGE</h1>
+                            <h2 data-lang="pricingpackage2" class="pricing__number">6 month / $1000</h2>
+                        </header>
+                        <ul class="pricing__list">
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli12">Training Program (with regular updates)</p>
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli2">Daily WhatsApp Follow-up</p>
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli14">Nutritional Program (monthly updates)</p>
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli4">Dietary Supplements</p>
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli5">Performance Enhancers</p>
+                            </li>
+                        </ul>
+                        <a data-lang="button3" href="#" class="button button__flex pricing__button">
+                            Purchase Now
+                        </a>
+                    </article>
+        
+                    <article class="pricing__card article3">
+                        <header class="pricing__header">
+                            <div class="pricing__shape">
+                                <img src="{% static 'icon/5.svg' %}" alt="" class="pricing__img">
+                            </div>
+                            <h1 data-lang="pricingtitle3" class="pricing__title">DIAMOND PACKAGE</h1>
+                            <h2 data-lang="pricingpackage3" class="pricing__number">1 year / $2000</h2>
+                        </header>
+                        <ul class="pricing__list">
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli31">Training Program (private sessions)</p>
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli2">Daily WhatsApp Follow-up</p>
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli33">Nutritional Program (weekly updates)</p>
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli4">Dietary Supplements</p>
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> <p data-lang="pricinglli5">Performance Enhancers</p>
+                            </li>
+                        </ul>
+                        <a data-lang="button3" href="#" class="button button__flex pricing__button">
+                            Purchase Now
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section> 
+
+      
+      
+         <!--==================== Contact ====================-->
+        <section class="contact section" id="contact" data-aos="fade-left">
+            <div class="contact__container grid">
+               <div class="contact__data">
+                  <h2 class="section__title-2">
+                     <span data-lang="comtact">contact me.</span>
+                  </h2>
+                     <p class="contact__description-1">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos error dicta aspernatur? Accusantium, sed? Consectetur.
+                     </p>
+                     <p class="contact__description-2">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates reiciendis officia culpa ipsum commodi id.
+                     </p>
+                     <div class="gometric-box"></div>
+               </div>
+               <div class="contact__mail">
+                  <h2 data-lang="contactsend" class="contact__title">
+                     Send Me A Message
+                  </h2>
+                  <form action="" class="contact__form" id="contact-form">
+                     <div class="contact__group">
+                        <div class="contact__box">
+                           <input type="text" name="user_name" class="contact__input" id="name" required placeholder="Frist Name">
+                           <label data-lang="contactlabel1" for="name" class="contact__label">First Name</label>
+                        </div>
+   
+                        <div class="contact__box">
+                           <input type="email" name="user_email" class="contact__input" id="email" required placeholder="Email Address">
+                           <label data-lang="contactlabel2" for="email" class="contact__label">Email Address</label>
+                        </div>
+                     </div>
+                        <div class="contact__box contact__area">
+                           <textarea name="user_message" id="message" class="contact__input" required placeholder="Message"></textarea>
+                           <label data-lang="contactlabel4" for="message" class="contact__label">Message</label>
+                        </div>
+                     
+                        <p class="contact__message" id="contact-message">
+                            
+                        </p>
+   
+                     <button data-lang="button4" type="submit" class="contact__button button">
+                        Send Message
+                     </button>
+                  </form>
+               </div>
+               <div class="contact__social">
+                  {% comment %} <img src="imag/es/curved-arrow.svg" alt="" class="contact__social-arrow"> {% endcomment %}
+               <div class="contact__social-data">
+                  <div>
+                     <p data-lang="contacno" class="contact__social-description-1">
+                        Does not send emails
+                     </p>
+                     <p data-lang="contactyes" class="contact__social-description-2">
+                        Write me on my social networks
+                     </p>
+                  </div>
+   
+                  <div class="contact__social-links">
+                     <a href="" target="_blank" class="contact__social-link">
+                        <i class="ri-facebook-fill"></i>
+                     </a>
+   
+                     <a href="" target="_blank" class="contact__social-link">
+                        <i class="ri-facebook-fill"></i>
+                     </a>
+   
+                     <a href="" target="_blank" class="contact__social-link">
+                        <i class="ri-facebook-fill"></i>
+                     </a>
+   
+                     <a href="" target="_blank" class="contact__social-link">
+                        <i class="ri-facebook-fill"></i>
+                     </a>
+                  </div>
+               </div>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== accordion ====================-->
+         <section class="accordion container" id="accordion" data-aos="fade-right">
+            <h2 data-lang="qustion" class="section__title">Frequently Asked Questions</h2>
+        
+            <div class="accordion__container">
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 data-lang="qustion1" class="accordion__title">How quickly can I see results?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p data-lang="ansswer1" class="accordion__description">
+                            You can start seeing noticeable changes in your body within a few weeks. With my customized training and nutrition plans, many clients achieve significant transformations in a short period.
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 data-lang="qustion2" class="accordion__title">Can I really transform my body?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p data-lang="ansswer2" class="accordion__description">
+                            Absolutely! I've helped numerous clients completely transform their bodies and lives. Whether you want to build muscle, lose weight, or prepare for a competition, my programs are designed to deliver results.
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 data-lang="qustion3" class="accordion__title">What makes your programs different?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p data-lang="ansswer3" class="accordion__description">
+                            My programs are personalized to fit your specific goals and lifestyle. I provide daily support and guidance to ensure you're on track, making it easier to achieve your desired body transformation.
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 data-lang="qustion4" class="accordion__title">How do you support clients during their transformation?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p data-lang="ansswer4" class="accordion__description">
+                            I offer daily WhatsApp follow-ups to provide constant motivation and adjust your plan as needed. This hands-on approach helps ensure you're making progress and staying motivated throughout your journey.
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 data-lang="qustion5" class="accordion__title">Is your program suitable for everyone?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p data-lang="ansswer5" class="accordion__description">
+                            Yes, my programs are tailored to fit individual needs, whether you're a beginner or an experienced athlete. I work closely with each client to ensure they achieve their body transformation goals safely and effectively.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+                    
+                       
+             
+      </main>
+
+      <!--==================== FOOTER ====================-->
+       <footer class="footer">
+         <div class="row">
+            <div class="col">
+               <img src="{% static 'images/logo2.png' %}" alt="" class="logo">
+               <p data-lang="footerp">Coach Wasim Hassan: NBC champion and expert in quick, effective fitness transformations.</p>
+            </div>
+            <div class="col">
+                <h3> <p data-lang="footerh31">Main Menu</p> <div class="underline"><span></span></div></h3>
+               <ul>
+                  <li><a data-lang="home" href="#home">Home</a></li>
+                  <li><a data-lang="Transformation" href="#tranding">Transformation</a></li>
+                  <li><a data-lang="Pricing" href="#pricing">Pricing</a></li>
+                  <li><a data-lang="footer" href="#footer">Footer</a></li>
+               </ul>
+            </div>
+            <div class="col">
+                <h3 ><P data-lang="footerh32"> Information </p><div class="underline"><span></span></div></h3></h3>
+                    <ul>
+                <li><a data-lang="About" href="{% url 'index' %}#about">About</a></li>
+                <li><a data-lang="accordion" href="#accordion">FAQs</a></li>
+                <li><a data-lang="Testimonial" href="{% url 'about' %}#testimonial">Testimonial</a></li>
+                  <li><a data-lang="Contact" href="#contact">Contact</a></li>
+               </ul>
+            </div>
+            <div class="col">
+                <h3><P data-lang="footerh33"> Social Media </p><div class="underline"><span></span></div></h3></h3>
+                    <form>
+                  <input type="email" placeholder="Enter your email id" required>
+               </form>
+               <div class="contact__social-links">
+                  <a href="https://www.instagram.com/wassimhs1/?g=5" target="_blank" class="contact__social-link">
+                     <i class="ri-instagram-fill"></i>
+                  </a>
+
+                  <a href="https://www.youtube.com/@wassim_hassan" target="_blank" class="contact__social-link">
+                     <i class="ri-youtube-fill"></i>
+                  </a>
+
+                  <a href="https://www.facebook.com/IFBB.ProWassemHassan?mibextid=JRoKGi&rdid=Vxi2LeIscSTtys3y&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FRzSpt5TZCL9JzQkN%2F%3Fmibextid%3DJRoKGi" target="_blank" class="contact__social-link">   
+                     <i class="ri-facebook-circle-fill"></i>
+                  </a>
+
+                  <a href="https://www.tiktok.com/@ifbbprowassimhassan?_t=8nTAgnInKBk&_r=1" target="_blank" class="contact__social-link">
+                     <i class="ri-tiktok-fill"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <hr>
+         <p class="copyright">Created By <a class="moalrmaly" href="https://api.whatsapp.com/send?phone=+201005718132">MOAlramaly</a> &#169;All Rights Reserved</p>
+
+      </footer> 
+
+
+      <!--=============== SCROLL UP ===============-->
+      <a href="#" class="scrollup" id="scroll-up">
+         <i class="ri-arrow-up-double-fill"></i>
+     </a>
+
+      <!--========== SCROLL UP ==========-->
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+      <script src="{% static 'js/language.js' %}"></script>
+      <script src="{% static 'js/main.js' %}"></script>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+      <script>
+        AOS.init({
+          offset:200,
+          duration: 1500
+        });
+      </script>
+   </body>
+</html>

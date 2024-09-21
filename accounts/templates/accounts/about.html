@@ -1,0 +1,525 @@
+{% load static %}
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="{% static 'images/logo1.png' %}" type="image/x-icon">
+  
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <!--=============== SWIPER CSS ===============--> 
+      <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'css/master.css' %}">
+      
+<style>
+   
+#language-selector {
+   appearance: none;
+    font-weight: bolder;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-size: cover;
+    background-position: center;
+    color: var(--body-color);
+    border: none;
+    background: var(--first-color);
+    padding: 10px;
+    border-radius: 1rem 0;
+    cursor: pointer;
+    outline: none;
+}
+
+#language-selector option {
+  color: #000;
+}
+</style>
+
+      <title>Wissam</title>
+   </head>
+   <body>
+      <div id="preloader"></div>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+        
+         <nav class="nav container">
+            <a href="{% url 'index' %}" class="logo">
+               <img src="{% static 'images/logo1.png' %}" alt="">
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="{% url 'index' %}#home" class="nav__link" data-lang="home">Home</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#testimonial" class="nav__link" data-lang="Testimonial">Testimonial</a>
+                 </li>
+                 <li class="nav__item">
+                     <a href="#contact" class="nav__link" data-lang="Contact">Contact</a>
+                 </li>
+                 <li class="nav__item">
+                     <a href="#accordion" class="nav__link" data-lang="accordion">FAQs</a>
+                 </li>
+                 
+                  </li>
+               </ul>
+               
+               <div class="nav__social">
+                  <a href="https://www.facebook.com/IFBB.ProWassemHassan?mibextid=JRoKGi&rdid=Vxi2LeIscSTtys3y&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FRzSpt5TZCL9JzQkN%2F%3Fmibextid%3DJRoKGi" target="_blank" class="nav__social-link">
+                     <i class="ri-facebook-circle-fill"></i>
+                  </a>
+                  <a href="https://www.instagram.com/wassimhs1/?g=5" target="_blank" class="nav__social-link">
+                     <i class="ri-instagram-fill"></i>
+                  </a>
+                  <a href="https://www.youtube.com/@wassim_hassan" target="_blank" class="nav__social-link">
+                     <i class="ri-youtube-fill"></i>
+                  </a>
+                  <a href="https://www.tiktok.com/@ifbbprowassimhassan?_t=8nTAgnInKBk&_r=1" target="_blank" class="nav__social-link">
+                     <i class="ri-tiktok-fill"></i>
+                  </a>
+               </div>
+               <!--   CLOSE BUTTON  -->
+                  <div class="nav__close" id="nav-close">
+                     <i class="ri-eye-close-fill"></i>
+                  </div>
+            </div>
+                           <!--   Toggle button  -->
+                           <div class="nav__buttons">
+                              <i class="ri-moon-fill change-theme" id="theme-button"></i>
+                     
+                                  <div class="nav__toggle" id="nav-toggle">
+                                    <i class="ri-menu-fold-2-fill"></i>
+                     
+                                  </div>
+                                  <select  name="" id="language-selector">
+                                    <i class="fa-solid fa-earth-oceania"></i>
+                                    <option value="en" selected>En</option>
+                                    <option value="ar">Ar</option>
+                                </select>
+                                 </div>
+            
+         </nav>
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+
+         <section class="home3 section" id="home3" data-aos="fade-right">
+            <div class="home__container3 container grid">
+               <img src="{% static 'images/1.jpg' %}" alt="" class="home__img3">
+
+               <div class="home__data3">
+                  <h1 class="home__title">
+                     <P style=" color: var(--title-color);" data-lang="home31">Welcome to</P> 
+                     
+                        <!-- <img src="images/271403819_658346935581994_6762317103497428629_n.jpg" alt=""> -->
+                        <P style=" color: var(--title-color);" data-lang="home3311">Wassim's world</P> 
+                  </h1>
+
+                  <p data-lang="homep311" class="home__description3">
+                     where dreams become reality through strength, dedication, and comprehensive fitness
+                              </p>
+                              <a data-lang="button" href="{% url 'pricing' %}" class="button">
+                                 Start Now
+                              </a>
+                              
+               </div>
+            </div>
+            <!-- <img src="images/324437116_1992821904442287_1333972918264412891_n.jpg" alt="" class="home__leaf-1"> -->
+            <!-- <img src="images/324437116_1992821904442287_1333972918264412891_n.jpg" alt="" class="home__leaf-2"> -->
+
+         </section>
+
+         <div class="wrapper" data-aos="fade-left">
+      <div class="containere">
+         <i class="ri-youtube-fill"></i>
+          <span class="num" data-val="14">00K</span>
+          <!-- <span class="text">Followers</span> -->
+      </div>
+      <div class="containere">
+         <i class="ri-tiktok-fill"></i>
+          <span class="num" data-val="40">00K</span>
+          <!-- <span class="text">Followers</span> -->
+      </div>
+      <div class="containere">
+         <i class="ri-facebook-fill"></i>
+          <span class="num" data-val="30">00K</span>
+          <!-- <span class="text">Followers</span> -->
+      </div>
+      <div class="containere">
+         <i class="ri-instagram-line"></i>
+          <span class="num" data-val="32">00K</span>
+          <!-- <span class="text">Followers</span> -->
+      </div>
+         </div>
+         <!--==================== ABOUT ====================-->
+         <section class="about section" id="about" data-aos="fade-right">
+            <div class="about__container container grid">
+               <div class="about__data">
+                  <h2 data-lang="about1" class="section__title">More About Us</h2>
+                  <p data-lang="about22" class="about__description">
+                     Coach Wasim Hassan is a renowned professional champion in the NBC federation with an impressive track record of success. His journey to excellence began with earning his pro card at Mr. Olympia Lebanon, followed by victories at Mr. World and the Dubai International, where he was crowned Champion of Champions. With a pro card from ELITE, Coach Wasim is a leading figure in his field. Not only has he excelled as an athlete, but he also shines as a dedicated trainer. Based in the UAE, he offers tailored training and nutritional programs designed to transform bodies and lives. His personalized approach helps clients achieve remarkable results, whether it's building muscle, losing weight, or preparing for competitions.
+                 </p>
+                 
+                  <!-- <a href="#" class="button">Know More</a> -->
+               </div>
+               <img src="{% static 'images/4.jpg' %}" alt="" class="about__img">
+            </div>
+         </section>
+
+         <!--==================== CARE ====================-->
+         <section class="care section" id="care" data-aos="fade-left">
+            <h2 class="section__title">
+               <p data-lang="podcast1">INSIGHTS AND EXPERTISE FROM</p><p data-lang="podcast2">COACH WASIM'S PODCAST</p>
+           </h2>
+           
+            <div class="care__container container grid">
+               <img src="{% static 'images/ch4.jpg' %}" alt="" class="care__img">
+        
+                <ul class="care__list">
+                    <li class="care__item">
+                        <i class="ri-checkbox-fill"></i>
+                        <p data-lang="podcast3">
+                            Coach Wasim Hassan's podcast is a valuable resource where he interviews top gym trainers and renowned bodybuilders. Gain insights and tips from the best in the industry to enhance your fitness journey.
+                        </p>
+                    </li>
+                    <li class="care__item">
+                        <i class="ri-checkbox-fill"></i>
+                        <p data-lang="podcast4">
+                            Discover practical advice and effective strategies for achieving your fitness goals. Coach Wasim brings expert opinions and success stories that can motivate and guide you towards your aspirations.
+                        </p>
+                    </li>
+                    <li class="care__item">
+                        <i class="ri-checkbox-fill"></i>
+                        <p data-lang="podcast5">
+                            Stay informed about the latest trends and techniques in bodybuilding and training. The podcast offers valuable information that can help you optimize your workouts and nutrition plans.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+         </section>
+         <!--==================== project ====================-->
+         <section class="projects section" id="projects"  data-aos="fade-right">
+            <h2 data-lang="youtube" class="section__title">My Youtube Channel</h2>
+
+
+         <div class="container">
+            <div class="projects__container swiper">
+               <div class="swiper-wrapper">
+                  <div class="projects__content swiper-slide">
+                     <iframe class="projects__img" width="560" height="315" src="https://www.youtube.com/embed/dRMxhd2GGx0?si=JA9CbQEJKgcxaBYH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                              <div>
+                     
+                        <a href="https://www.youtube.com/@Wassim_Hassan/featured" class="projects__button button">
+                           <p data-lang="youtubebutton">See More</p>
+                        </a>
+                  </div>
+                  </div>
+                  <div class="projects__content swiper-slide">
+                     <iframe class="projects__img" width="560" height="315" src="https://www.youtube.com/embed/m0TLJAxXNlg?si=sSu_Ov_yHdJ2C1Yh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                     <div>
+                        
+                        <a href="https://www.youtube.com/@Wassim_Hassan/featured" class="projects__button button">
+                           <p data-lang="youtubebutton">See More</p>
+                        </a>
+                  </div>
+                  </div>
+                  <div  class="projects__content swiper-slide">
+                     <iframe class="projects__img" width="560" height="315" src="https://www.youtube.com/embed/ZsbN80qH6CM?si=lSu8Qe6j5NyR7WyF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div>
+                        
+                        <a href="https://www.youtube.com/@Wassim_Hassan/featured" class="projects__button button">
+                           <p data-lang="youtubebutton">See More </p>
+                        </a>
+                  </div>
+                  </div>
+                  <div class="projects__content swiper-slide">
+                  
+                     <iframe class="projects__img" width="560" height="315" src="https://www.youtube.com/embed/FAnRSOhNAM8?si=43ECsARAOFiDZTk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+                     </iframe>
+                  <div>
+                        
+                        <a href="https://www.youtube.com/@Wassim_Hassan/featured" class="projects__button button">
+                           <p data-lang="youtubebutton">See More</p>
+                        </a>
+                  </div>
+                  </div>
+               </div>
+               <div class="swiper-button-prev">
+                  <!-- <i class="fa-solid fa-angle-left"></i> -->
+                  <i class="ri-arrow-left-line"></i>
+               </div>
+               <div class="swiper-button-next">
+                  <i class="ri-arrow-right-line"></i>
+               </div>
+               <div class="swiper-pagination"></div>
+            </div>
+         </div>
+         </section>
+         <!--==================== TESTIMONIAL REALLY ====================-->
+         <section class="testimonial section" id="testimonial" data-aos="fade-left">
+               <h2 data-lang="testimonialh2" class="section__title">Testimonials</h2>
+               <div class="testimonial__container container swiper">
+                  <div class="swiper-wrapper">
+                     <div class="testimonial__card swiper-slide">
+                        <img src="{% static 'images/client1_2_11zon.webp' %}" alt="" class="testimonial__img">
+                        <h3 data-lang="testimonialname1" class="testimonial__name">Khalid Al Falasi</h3>
+                           <p data-lang="testimonialp1" class="testimonial__description">Joining was a game-changer! Achieved fitness goals with personalized guidance and remarkable trainer support. The encouraging community made sharing my journey truly rewarding.</p>
+                     </div>
+                     <div class="testimonial__card swiper-slide">
+                        <img src="{% static 'images/client3_3_11zon.webp' %}" alt="" class="testimonial__img">
+                        <h3 data-lang="testimonialname2" class="testimonial__name">Omar Al Nuaimi</h3>
+                           <p data-lang="testimonialp2" class="testimonial__description">Transformative experience with an excellent trainer. Your story matters here. Join, share, and let's empower each other!</p>
+                        </div>
+                     <div class="testimonial__card swiper-slide">
+                        <img src="{% static 'images/feed4_4_11zon.webp' %}" alt="" class="testimonial__img">
+                        <h3 data-lang="testimonialname3" class="testimonial__name">Faisal Al Qassimi</h3>
+                           <p data-lang="testimonialp3" class="testimonial__description">One of the best decisions. Unparalleled support and inspiration. Don't miss out—join us and share your achievements!</p>
+                     </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+               </div>
+         </section>
+         <!--==================== Contact ====================-->
+         <section class="contact section" id="contact" data-aos="fade-right">
+            <div class="contact__container grid">
+               <div class="contact__data">
+                  <h2 class="section__title-2">
+                     <span data-lang="comtact">contact me.</span>
+                  </h2>
+                     <p class="contact__description-1">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos error dicta aspernatur? Accusantium, sed? Consectetur.
+                     </p>
+                     <p class="contact__description-2">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates reiciendis officia culpa ipsum commodi id.
+                     </p>
+                     <div class="gometric-box"></div>
+               </div>
+               <div class="contact__mail">
+                  <h2 data-lang="contactsend" class="contact__title">
+                     Send Me A Message
+                  </h2>
+                  <form action="" class="contact__form" id="contact-form">
+                     <div class="contact__group">
+                        <div class="contact__box">
+                           <input type="text" name="user_name" class="contact__input" id="name" required placeholder="Frist Name">
+                           <label data-lang="contactlabel1" for="name" class="contact__label">First Name</label>
+                        </div>
+   
+                        <div class="contact__box">
+                           <input type="email" name="user_email" class="contact__input" id="email" required placeholder="Email Address">
+                           <label data-lang="contactlabel2" for="email" class="contact__label">Email Address</label>
+                        </div>
+                     </div>
+                        <div class="contact__box contact__area">
+                           <textarea name="user_message" id="message" class="contact__input" required placeholder="Message"></textarea>
+                           <label data-lang="contactlabel4" for="message" class="contact__label">Message</label>
+                        </div>
+                     
+                        <p class="contact__message" id="contact-message">
+                            
+                        </p>
+   
+                     <button data-lang="button4" type="submit" class="contact__button button">
+                        Send Message
+                     </button>
+                  </form>
+               </div>
+               <div class="contact__social">
+                  {% comment %} <img src="images/curved-arrow.svg" alt="" class="contact__social-arrow"> {% endcomment %}
+               <div class="contact__social-data">
+                  <div>
+                     <p data-lang="contacno" class="contact__social-description-1">
+                        Does not send emails
+                     </p>
+                     <p data-lang="contactyes" class="contact__social-description-2">
+                        Write me on my social networks
+                     </p>
+                  </div>
+   
+                  <div class="contact__social-links">
+                     <a href="" target="_blank" class="contact__social-link">
+                        <i class="ri-facebook-fill"></i>
+                     </a>
+   
+                     <a href="" target="_blank" class="contact__social-link">
+                        <i class="ri-facebook-fill"></i>
+                     </a>
+   
+                     <a href="" target="_blank" class="contact__social-link">
+                        <i class="ri-facebook-fill"></i>
+                     </a>
+   
+                     <a href="" target="_blank" class="contact__social-link">
+                        <i class="ri-facebook-fill"></i>
+                     </a>
+                  </div>
+               </div>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== accordion ====================-->
+         <section class="accordion container" id="accordion" data-aos="fade-left">
+            <h2 data-lang="qustion" class="section__title">Frequently Asked Questions</h2>
+        
+            <div class="accordion__container">
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 data-lang="qustion1" class="accordion__title">How quickly can I see results?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p data-lang="ansswer1" class="accordion__description">
+                            You can start seeing noticeable changes in your body within a few weeks. With my customized training and nutrition plans, many clients achieve significant transformations in a short period.
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 data-lang="qustion2" class="accordion__title">Can I really transform my body?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p data-lang="ansswer2" class="accordion__description">
+                            Absolutely! I've helped numerous clients completely transform their bodies and lives. Whether you want to build muscle, lose weight, or prepare for a competition, my programs are designed to deliver results.
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 data-lang="qustion3" class="accordion__title">What makes your programs different?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p data-lang="ansswer3" class="accordion__description">
+                            My programs are personalized to fit your specific goals and lifestyle. I provide daily support and guidance to ensure you're on track, making it easier to achieve your desired body transformation.
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 data-lang="qustion4" class="accordion__title">How do you support clients during their transformation?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p data-lang="ansswer4" class="accordion__description">
+                            I offer daily WhatsApp follow-ups to provide constant motivation and adjust your plan as needed. This hands-on approach helps ensure you're making progress and staying motivated throughout your journey.
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <i class='bx bx-plus accordion__icon'></i>
+                        <h3 data-lang="qustion5" class="accordion__title">Is your program suitable for everyone?</h3>
+                    </header>
+                    <div class="accordion__content">
+                        <p data-lang="ansswer5" class="accordion__description">
+                            Yes, my programs are tailored to fit individual needs, whether you're a beginner or an experienced athlete. I work closely with each client to ensure they achieve their body transformation goals safely and effectively.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+      </main>
+
+      <!--==================== FOOTER ====================-->
+       <footer class="footer">
+         <div class="row">
+            <div class="col">
+               <a href="{% url 'index' %}">
+                  <img src="{% static 'images/logo2.png' %}" alt="" class="logo">
+              </a>
+              
+               <p data-lang="footerp">Coach Wasim Hassan: NBC champion and expert in quick, effective fitness transformations.</p>
+            </div>
+            <div class="col">
+               <h3> <p data-lang="footerh31">Main Menu</p> <div class="underline"><span></span></div></h3>
+               <ul>
+                  <li><a data-lang="home" href="#home3">Home</a></li>
+                  <!-- <li><a href="#tranding">Transformation</a></li> -->
+                  <!-- <li><a href="#pricing">Pricing</a></li> -->
+                  <li><a data-lang="footer" href="#footer">Footer</a></li>
+               </ul>
+            </div>
+            <div class="col">
+               <h3 ><P data-lang="footerh32"> Information </p><div class="underline"><span></span></div></h3></h3>
+                  <!-- روابط إلى صفحات أخرى -->
+<ul>
+   <li><a data-lang="About" href="{% url 'index' %}#about">About</a></li>
+   <li><a data-lang="accordion" href="{% url 'about' %}#accordion">FAQs</a></li>
+   <li><a data-lang="Testimonial" href="{% url 'about' %}#testimonial">Testimonial</a></li>
+   <li><a data-lang="Contact" href="{% url 'about' %}#contact">Contact</a></li>
+   
+</ul>
+
+            </div>
+            <div class="col">
+               <h3><P data-lang="footerh33"> Social Media </p><div class="underline"><span></span></div></h3></h3>
+                  <form>
+                  <input type="email" placeholder="Enter your email id" required>
+               </form>
+               <div class="contact__social-links">
+                  <a href="https://www.instagram.com/wassimhs1/?g=5" target="_blank" class="contact__social-link">
+                     <i class="ri-instagram-fill"></i>
+                  </a>
+
+                  <a href="https://www.youtube.com/@wassim_hassan" target="_blank" class="contact__social-link">
+                     <i class="ri-youtube-fill"></i>
+                  </a>
+
+                  <a href="https://www.facebook.com/IFBB.ProWassemHassan?mibextid=JRoKGi&rdid=Vxi2LeIscSTtys3y&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FRzSpt5TZCL9JzQkN%2F%3Fmibextid%3DJRoKGi" target="_blank" class="contact__social-link">   
+                     <i class="ri-facebook-circle-fill"></i>
+                  </a>
+
+                  <a href="https://www.tiktok.com/@ifbbprowassimhassan?_t=8nTAgnInKBk&_r=1" target="_blank" class="contact__social-link">
+                     <i class="ri-tiktok-fill"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <hr>
+         <p class="copyright">Created By <a class="moalrmaly" href="https://api.whatsapp.com/send?phone=+201005718132">MOAlramaly</a> &#169;All Rights Reserved</p>
+
+      </footer> 
+
+   <!--=============== SCROLL UP ===============-->
+   <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-double-fill"></i>
+  </a>
+
+   <!--========== SCROLL UP ==========-->
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+   <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+   <script src="{% static 'js/language.js' %}"></script>
+   <script src="{% static 'js/main.js' %}"></script>
+   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        offset:200,
+        duration: 1500
+      });
+    </script>
+   </body>
+</html>

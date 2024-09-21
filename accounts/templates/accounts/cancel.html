@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/logo1.png' %}"
+      type="image/x-icon"
+    />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static 'css/cancel.css' %}" />
+
+    <title>Responsive pirate website - Bedimcode</title>
+  </head>
+
+  <body>
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home">
+        <div class="home__container container">
+          <img src="" alt="" class="home__cloud-1" />
+          <img src="" alt="" class="home__cloude-2" />
+          <div class="home__data">
+            <h3 class="home__subtitle">Payment Cancelled</h3>
+            <h1 class="home__title"><span>Oops! Your payment has been cancelled</span> If you have any questions, please
+              contact support.</h1>
+              <a href="{% url 'index' %}" class="home__button">Return to Home</a>
+
+          </div>
+          <div class="home__images">
+            <div
+            class="home__waver-3"
+            style="background-image: url('{% static "images/waves-3.png" %}')"
+          ></div>
+          <div
+            class="home__waver-2"
+            style="background-image: url('{% static "images/waves-2.png" %}')"
+          ></div>
+          {% comment %} <img src="{% static 'images/gy.svg' %}" alt="" class="home__ship" /> {% endcomment %}
+          <div
+            class="home__waver-1"
+            style="background-image: url('{% static "images/waves-1.png" %}')"
+          ></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
