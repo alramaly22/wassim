@@ -6,7 +6,7 @@ import stripe
 # إعداد مفتاح API الخاص بـ Stripe من الإعدادات
 stripe.api_key = settings.STRIPE_API_KEY
 
-YOUR_DOMAIN = "http://127.0.0.1:8000"
+YOUR_DOMAIN = "https://wassim-jet.vercel.app"
 
 def index(request):
     return render(request, 'accounts/index.html')
@@ -35,7 +35,7 @@ def create_checkout_session(request):
                     },
                 ],
                 mode="payment",  # وضع الدفع لمرة واحدة
-                success_url=YOUR_DOMAIN + "/success/",
+                success_url=YOUR_DOMAIN + "/second/",
                 cancel_url=YOUR_DOMAIN + "/cancel/",
             )
             return redirect(checkout_session.url, code=303)
